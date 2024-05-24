@@ -1,0 +1,25 @@
+[workspace.package]
+version = "0.1.0"
+authors = ["Skienex", "sqyyy"]
+edition = "2021"
+repository = "https://github.com/Skienex/secure-server"
+license = "MIT"
+
+[workspace]
+resolver = "2"
+members = [
+    "client",
+    "server",
+    "common",
+    "key-manager"
+]
+
+[workspace.dependencies]
+anyhow = "1.0.79"
+openssl = "0.10.63"
+chrono = "0.4.38"
+
+[workspace.dependencies.pqcrypto]
+version = "0.17.0"
+default-features = false
+features = ["pqcrypto-kyber", "pqcrypto-dilithium"]

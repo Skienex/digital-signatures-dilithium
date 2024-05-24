@@ -1,0 +1,14 @@
+[package]
+name = "key-manager"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+pqcrypto.workspace = true
+
+[[bin]]
+name = "keymgr"
+path = "src/main.rs"
